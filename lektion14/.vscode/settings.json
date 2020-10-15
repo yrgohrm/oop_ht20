@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "jars/slf4j-api-1.7.9.jar",
+        "jars/slf4j-simple-1.7.9.jar"
+    ]
+}
