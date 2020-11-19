@@ -15,7 +15,11 @@ public class RangeSum extends RecursiveTask<Integer> {
     protected Integer compute() {
         if (to-from < 100) {
             System.out.println("Compute");
-            return IntStream.range(from, to+1).sum();
+            int sum = 0;
+            for (int i = from; i <= to; ++i) {
+                sum += i;
+            }
+            return sum;
         }
         else {
             System.out.println("Split");

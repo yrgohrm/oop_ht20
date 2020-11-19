@@ -56,7 +56,7 @@ public class Mandelbrot extends Canvas {
     // how long to test for orbit divergence
     private static final int NUM_ITERATIONS = 50;
     // maximum grid size to process sequentially
-    private static final int SEQ_CUTOFF = 128;
+    private static final int SEQ_CUTOFF = 256;
 
     private int colorscheme[];
 

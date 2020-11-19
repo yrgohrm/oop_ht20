@@ -1,4 +1,3 @@
-import java.time.temporal.ChronoUnit;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
@@ -16,6 +15,8 @@ public class CompFut {
         }).exceptionally(ex -> {
             System.out.println("Exception: " + ex.getMessage());
             return null;
+        }).thenAccept(s -> {
+            System.out.println("the end");
         });
 
         ForkJoinPool.commonPool().awaitQuiescence(1, TimeUnit.DAYS);
