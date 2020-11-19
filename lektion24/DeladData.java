@@ -1,16 +1,19 @@
 import java.util.concurrent.ThreadLocalRandom;
 
-public class ThreadEx1 {
+public class DeladData {
+    private static String text;
+
     private static class PrintRunner implements Runnable {
         public void run() {
-            int random = ThreadLocalRandom.current().nextInt(10);
             for (int i = 0; i < 200; ++i) {
-                System.out.print(random + " ");
+                System.out.print(text + " ");
             }
         }
     }
 
     public static void main(String[] args) {
+        text = "x";
+
         PrintRunner pr1 = new PrintRunner();
         PrintRunner pr2 = new PrintRunner();
 

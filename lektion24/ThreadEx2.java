@@ -3,6 +3,7 @@ public class ThreadEx2 {
         public void run() {
             while (!Thread.currentThread().isInterrupted()) {
                 System.out.println("Jobbar...");
+                System.out.println("hemma...");
 
                 try {
                     Thread.sleep(50);
@@ -21,9 +22,24 @@ public class ThreadEx2 {
 
         Thread.sleep(500);
      
+        System.out.println("Snälla avsluta dig!");
         t1.interrupt();
         t1.join();
 
         System.out.println("Exiting main thread...");
     }
 }
+
+
+/*
+Tråd 1                            Tråd 2
+-------------------------------------------
+list.add(xxx);
+list.size();
+                                  list.add(xxx);
+                                  listSize = list.size();
+listSize = 
+
+
+
+*/
