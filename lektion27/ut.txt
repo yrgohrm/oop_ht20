@@ -1,0 +1,4 @@
+Filename: C:\Projekt\oop_ht_20\lektion27\paavo.txt
+Date: 2020-12-02 02:41:02
+Words processed: 412
+Total unique words: 73
