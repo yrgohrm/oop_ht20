@@ -10,6 +10,12 @@ public class IceCream {
         this.scoops = new ArrayList<>(5);
     }
 
+    /**
+     * Adds a scoop to the ice cream. Can't have more than five scoops.
+     * 
+     * @param scoop the scoop to add
+     * @throws IllegalStateException if the ice cream already contains five scoops
+     */
     public void addScoop(IceCreamScoop scoop) {
         if (scoops.size() >= 5) {
             throw new IllegalStateException("Too many scoops.");
